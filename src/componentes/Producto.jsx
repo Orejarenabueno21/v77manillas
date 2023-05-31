@@ -41,6 +41,13 @@ const Producto = () => {
 <option value="opcion4">Cuero</option>
 <option value="opcion1">Cuerda</option>
 </select>
+
+  <label for="menu"><h3>
+    Selecciona el dije:</h3></label>
+<select id="menu" className='opt'>
+<option value="opcion4">Martillo</option>
+<option value="opcion1">Ancla</option>
+</select>
             <ul className="list-group">
                     {  
                         dijes.map(item =>(
