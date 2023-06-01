@@ -49,21 +49,21 @@ const Producto = () => {
 <label for="menu"><h3>
     Selecciona la clase de manilla:</h3></label>
     <select id="mate" className='opt' onChange={(e) => setMaterialSeleccionado(e.target.value)}>
-        <option value="c">Cuero</option>
+        <option value="cue">Cuero</option>
 <option value="k">Cuerda</option>
 </select>
 
  <label for="menu"><h3>
     Selecciona el dije:</h3></label>
 <select id="dije" className='opt' onChange={(e) => setDijeSeleccionado(e.target.value)}>
-<option value="m">Martillo</option>
+<option value="mar">Martillo</option>
 <option value="a">Ancla</option>
 </select>
 
   <label for="menu"><h3>
     Selecciona el tipo de manilla:</h3></label>
     <select id="dije" className='opt' onChange={(e) => setOpcionSeleccionada(e.target.value)}>
-<option value="o">Oro</option>
+<option value="oro">Oro</option>
 <option value="r">Oro rosado</option>
 <option value="p">Plata</option>
 <option value="n">Niquel</option>
@@ -72,7 +72,7 @@ const Producto = () => {
             <hr/>
             <label for="pago">Metodo de pago:</label>
             <select id="pago" className='opt' onChange={(e) => setPagoSelec(e.target.value)}>
-            <option value="d">Dolares</option>
+            <option value="dol">Dolares</option>
             <option value="p">Pesos</option>
             </select>
 
@@ -80,6 +80,7 @@ const Producto = () => {
                     {  
                         dijes.map(item =>(
                             <div className="list-group-item" key={item.id}>
+                                <h4>item.id Firebase</h4>
                                 {item.id}
                                 <h1 className="lead">{item[opcionesSeleccionadas]}</h1>
                             </div>
