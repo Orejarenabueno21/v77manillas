@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import {db} from '../firebase'
-import {collection, doc, onSnapshot, query} from 'firebase/firestore'
+import {collection, doc, onSnapshot, query} from 'firebase/firestore';
 
 
 
 
-const Producto = () => {
+
+
+const Productos = () => {
     const [dijes,setDijes] = useState([]);
     const [materialSeleccionado, setMaterialSeleccionado] = useState('');
     const [dijeSeleccionado, setDijeSeleccionado] = useState('');
@@ -46,6 +48,7 @@ const Producto = () => {
 <h1 className='titulo'>MANILLAS DONDE RAUL</h1>
 <hr/> 
 
+<img src="https://cdn.shopify.com/s/files/1/0347/2280/7941/products/25_47625628-7357-48ac-8104-971a43af80d7_1000x.jpg?v=1624550131" alt="imagen" width="100"/>
 <label for="menu"><h3>
     Selecciona la clase de manilla:</h3></label>
     <select id="mate" className='opt' onChange={(e) => setMaterialSeleccionado(e.target.value)}>
@@ -82,7 +85,7 @@ const Producto = () => {
                             <div className="list-group-item" key={item.id}>
                                 <h4>item.id Firebase</h4>
                                 {item.id}
-                                <h1 className="lead">{item[opcionesSeleccionadas]}</h1>
+                                <h1 className="lead">{item[dijeSeleccionado]}</h1>
                             </div>
                         ))   
                     }        
@@ -97,4 +100,4 @@ const Producto = () => {
 
 
 
-export default Producto
+export default Productos
